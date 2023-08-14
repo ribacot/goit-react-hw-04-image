@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import pixabayAPI from 'components/Sevice_Api/Pixabay_API';
 import { Circles } from 'react-loader-spinner';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
