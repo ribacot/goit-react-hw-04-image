@@ -4,7 +4,6 @@ export default function Searchbar({ value, onSubmit, onChenge }) {
     <header className={css.searchbar}>
       <form className={css.searchForm} onSubmit={onSubmit}>
         <button type="submit" className={css.searchForm_button}>
-          {/* <span className={css.searchForm_button_label}></span> */}
           Search
         </button>
 

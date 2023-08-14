@@ -18,69 +18,65 @@
 } */
 /* ------- */
 
-
-.searchbar{
+.searchbar {
   position: fixed;
   width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
   text-align: center;
   z-index: 33;
-    background: linear-gradient(-45deg, #f3d007, #0a1cc0dc,  #f3d007, #0a1cc0dc);
-	background-size: 400% 400%;
+  background: linear-gradient(-45deg, #f3d007, #0a1cc0dc, #f3d007, #0a1cc0dc);
+  background-size: 400% 400%;
 
-	animation: gradient 15s ease infinite;
-
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-
-.searchForm{
+.searchForm {
   display: flex;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
 }
-.searchForm_input{
+.searchForm_input {
   min-width: 300px;
 }
-.searchForm_input,.searchForm_button {
+.searchForm_input,
+.searchForm_button {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 12px;
-  border:none;
-    box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
-		5px 6px 10px 0px rgba(20, 1, 135, 0.85);
+  border: none;
+  box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+    5px 6px 10px 0px rgba(20, 1, 135, 0.85);
 }
 
 .searchForm_button {
   color: white;
-background-color: rgb(228, 151, 120);
+  background-color: rgb(228, 151, 120);
 }
 .searchForm_input:hover,
-.searchForm_input:focus{
-      box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
-		0px 2px 10px 5px rgba(20, 1, 135, 0.85);
-
+.searchForm_input:focus {
+  box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+    0px 2px 10px 5px rgba(20, 1, 135, 0.85);
 }
 
-.searchForm_button:hover{
+.searchForm_button:hover {
   border-color: #212121;
-  background-color: red ;
-      box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
-		0px 2px 10px 5px rgba(20, 1, 135, 0.85);
-
+  background-color: red;
+  box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+    0px 2px 10px 5px rgba(20, 1, 135, 0.85);
 }
 
 /* ---------- */
@@ -100,14 +96,14 @@ background-color: rgb(228, 151, 120);
   height: 48px;
   border: 0;
   /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
-  /* background-size: 40%;
+/* background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
-} */ 
+} */
 
 /* .searchForm_button:hover {
   opacity: 1;
