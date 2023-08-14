@@ -2,24 +2,31 @@ import { useEffect } from 'react';
 import css from './Modal.module.css';
 
 export default function Modal({ children, onClick }) {
+
+  const hendleModal = e => {
+    if (e.code === 'Escape') {
+      console.log('esc');
+
+      onClick();
+    }
+  };
+  const hendleBackDrop = e => {
+    if (e.target === e.currentTarget) onClick();
+  };
+
+
   useEffect(() => {
-    const hendleModal = e => {
-      if (e.code === 'Escape') {
-        console.log('esc');
-
-        onClick();
-      }
-    };
-
     window.addEventListener('keydown', hendleModal);
 
     return () => {
       window.removeEventListener('keydown', hendleModal);
     };
-  }, []);
+  }, [hendleModal]);
+
+
 
   return (
-    <div className={css.overlay} onClick={onClick}>
+    <div className={css.overlay} onClick={hendleBackDrop}>
       <div className={css.modal}>{children}</div>
     </div>
   );

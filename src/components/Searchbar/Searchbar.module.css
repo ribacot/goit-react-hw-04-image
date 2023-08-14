@@ -1,4 +1,4 @@
-.searchbar {
+/* .searchbar {
   top: 0;
   left: 0;
   position: sticky;
@@ -15,9 +15,76 @@
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+} */
+/* ------- */
+
+
+.searchbar{
+  position: fixed;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  z-index: 33;
+    background: linear-gradient(-45deg, #f3d007, #0a1cc0dc,  #f3d007, #0a1cc0dc);
+	background-size: 400% 400%;
+
+	animation: gradient 15s ease infinite;
+
 }
 
-.searchForm {
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.searchForm{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+.searchForm_input{
+  min-width: 300px;
+}
+.searchForm_input,.searchForm_button {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  border:none;
+    box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+		5px 6px 10px 0px rgba(20, 1, 135, 0.85);
+}
+
+.searchForm_button {
+  color: white;
+background-color: rgb(228, 151, 120);
+}
+.searchForm_input:hover,
+.searchForm_input:focus{
+      box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+		0px 2px 10px 5px rgba(20, 1, 135, 0.85);
+
+}
+
+.searchForm_button:hover{
+  border-color: #212121;
+  background-color: red ;
+      box-shadow: 1px 4px 10px 0px rgba(111, 15, 115, 0.2),
+		0px 2px 10px 5px rgba(20, 1, 135, 0.85);
+
+}
+
+/* ---------- */
+/* .searchForm {
   display: flex;
   align-items: center;
   width: 100%;
@@ -25,28 +92,28 @@
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
-}
+} */
 
-.searchForm_button {
+/* .searchForm_button {
   display: inline-block;
   width: 48px;
   height: 48px;
   border: 0;
   /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
-  background-size: 40%;
+  /* background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
-}
+} */ 
 
-.searchForm_button:hover {
+/* .searchForm_button:hover {
   opacity: 1;
-}
+} */
 
-.searchForm_button_label {
+/* .searchForm_button_label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -56,9 +123,9 @@
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
-}
+} */
 
-.searchForm_input {
+/* .searchForm_input {
   display: inline-block;
   width: 100%;
   font: inherit;
@@ -67,7 +134,7 @@
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-}
+} */
 
 .searchForm_input::placeholder {
   font: inherit;

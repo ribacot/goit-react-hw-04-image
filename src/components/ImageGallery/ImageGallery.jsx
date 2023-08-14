@@ -38,8 +38,8 @@ export default function ImageGallery({ searchQwery }) {
     setPage(1);
   }, [searchQwery]);
 
-  const toggleModal = e => {
-    if (e.target === e.currentTarget) setModalIsOpen(prev => !prev);
+  const toggleModal = () => {
+setModalIsOpen(prev => !prev);
   };
 
   const hendleImage = async e => {

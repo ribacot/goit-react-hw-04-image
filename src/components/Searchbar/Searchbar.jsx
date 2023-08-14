@@ -2,9 +2,10 @@ import css from './Searchbar.module.css';
 export default function Searchbar({ value, onSubmit, onChenge }) {
   return (
     <header className={css.searchbar}>
-      <form className={css.searchform} onSubmit={onSubmit}>
+      <form className={css.searchForm} onSubmit={onSubmit}>
         <button type="submit" className={css.searchForm_button}>
-          <span className={css.searchForm_button_label}>Search</span>
+          {/* <span className={css.searchForm_button_label}></span> */}
+          Search
         </button>
 
         <input

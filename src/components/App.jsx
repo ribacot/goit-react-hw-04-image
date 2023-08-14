@@ -1,34 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ImageGallery from './ImageGallery/ImageGallery';
 
 import Searchbar from './Searchbar/Searchbar';
-export class App extends Component {
-  state = {
-    searchQwery: '',
-    value:'',
-  };
-  hendlSearch = e => {
+
+export function App() {
+  const [searchQwery, setSearchQwery] = useState('');
+  const [value, setValue] = useState('');
+
+  const hendlSearch = e => {
     const { value } = e.target;
-    this.setState({ searchQwery: value });
-  };
-  onSubmit = async e => {
-    e.preventDefault();
-    const value = e.target.elements.searchQwery.value;
-    this.setState({
-      value,
-    searchQwery:""})
+    setSearchQwery(value);
   };
 
-  render() {
-    return (
-      <div className="App">
-        <Searchbar
-          value={this.state.searchQwery}
-          onSubmit={this.onSubmit}
-          onChenge={this.hendlSearch}
-        />
-        <ImageGallery searchQwery={this.state.value } />
-      </div>
-    );
-  }
+  const onSubmit = async e => {
+    e.preventDefault();
+    const value = e.target.elements.searchQwery.value;
+    setValue(value);
+    setSearchQwery('');
+  };
+  return (
+    <div className="App">
+      <Searchbar
+        value={searchQwery}
+        onSubmit={onSubmit}
+        onChenge={hendlSearch}
+      />
+      <ImageGallery searchQwery={value} />
+    </div>
+  );
 }
