@@ -5,6 +5,8 @@ import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import LoadMore from 'components/LoadMore/LoadMore';
 import Modal from 'components/Modal/Modal';
 import css from './ImageGallery.module.css';
+
+
 export default function ImageGallery({ searchQwery }) {
   const [pictures, setPictures] = useState([]);
   const [largeImage, setLargeImage] = useState(null);
@@ -15,9 +17,7 @@ export default function ImageGallery({ searchQwery }) {
   const per_page = 12;
 
   useEffect(() => {
-    if (!searchQwery & !pictures.length) return;
-    console.log('searchQwery', searchQwery);
-
+    if (!searchQwery) return;
     setVisible(true);
     pixabayAPI({
       q: searchQwery,
